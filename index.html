@@ -17,7 +17,7 @@
 
 </head>
 <body class="">
-    <header>
+    <header id="topo">
         <section id="menu-superior">
             <div><i class="fa-solid fa-phone"></i> (11) 99154-1717</div>
             <div><i class="fa-solid fa-envelope"></i> contato@webine.com.br</div>
@@ -35,13 +35,13 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#topo">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Cadastro</a>
+                    <a class="nav-link" href="#cadastro">Cadastro</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Lista</a>
+                    <a class="nav-link" href="#lista">Lista</a>
                   </li>
 
                 </ul>
@@ -66,7 +66,7 @@
             </div>
         </section>
 
-        <section id="formulario">
+        <section id="cadastro">
             <div class="container">
                 <div class="p-5 bg-body-tertiary mt-5">
                     <h1 class="text-success mb-4">Cadastre seu produto</h1>
@@ -75,33 +75,43 @@
                             <input  id="produto" type="text" class="mt-2 mb-2 form-control" placeholder="Digite o nome do produto">
                             <input id="marca" type="text" class="mt-2 mb-2 form-control" placeholder="Digite a marca do produto">
                             <input id="peso" type="number" class="mt-2 mb-2 form-control" placeholder="Coloque o peso do produto">
+                            <select class="mt-2 mb-2 form-select" aria-label="Default select example">
+                                <option selected>Selecione o setor que pertence o produto</option>
+                                <option value="1">Frutas, verduras e legumes</option>
+                                <option value="2">Padaria</option>
+                                <option value="3">Frios</option>
+                                <option value="3">Bebidas</option>
+                                <option value="3">Higiene</option>
+                                <option value="3">Laticíneos</option>
+                                <option value="3">Carnes</option>
+                                <option value="3">Doces</option>
+                                <option value="3">Grãos</option>
+                                <option value="3">Biscoitos</option>
+                              </select>
 
+                            <button onclick="btnCadastrar()" class="btn btn-success px-5">Cadastrar</button>
                         </div>
-                        <div col-6 >
-                            <img src="/img/venda.jpg" class="img-fluid" width="500" alt="">
-                        </div>
-                        <div class="col-lg-6 col-md-12 my-lg-0 my-2">
-                            
-                        </div>
-
+                        <div class="col-6" >
+                            <img src="/img/venda.jpg" class="img-fluid rounded-2" width="500" alt="">
                         </div>
                     </div>
-                    <div class="mt-3 text-start">
-                        <!-- Usamos "onclick" para criar um evento ao clicar -->
-                        <button onclick="btnCadastrar()" class="btn btn-success px-5">Cadastrar</button>
-                    </div>
-                </div>
-                <!-- Itens Cadastrados -->
-                <div class="mt-5 p-5">
-                    <ul id="lista-nomes" class="list-group">
-                        <!-- <li class="list-group-item">Item 1</li>
-                        <li class="list-group-item">Item 2</li>
-                        <li class="list-group-item">Item 3</li>
-                        <li class="list-group-item">Item 4</li> -->
-                    </ul>
                 </div>
             </div>
         </section>
+        <section id="lista">
+            <!-- Produtos Cadastrados -->
+            <div class="container p-5 bg-dark">
+                <h1 class="h1 text-white">Lista de Produtos Cadastrados</h1>
+                    <ul id="lista-produtos" class="list-group">
+                <!-- <li class="list-group-item">Item 1</li>
+                     <li class="list-group-item">Item 2</li>
+                     <li class="list-group-item">Item 3</li>
+                     <li class="list-group-item">Item 4</li> -->
+                    </ul>
+
+            </div>
+        </section>
+        
     </main>
 
 
