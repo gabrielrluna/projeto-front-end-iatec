@@ -1,0 +1,48 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    scroll-padding-top: 120px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    position: sticky;
+    top:0;
+    background-color: aliceblue;
+}
+
+#menu-superior{
+    line-height: 5vh;
+    display: flex;
+    justify-content: space-around
+    
+
+}
+
+#noturno{
+    border: none;
+    background: none;
+}
+
+#poster{
+    height: 83vh;
+    width: 98vw;
+    background-image: url(/img/mercado.jpg);
+    background-size: cover;
+    background-position-x: center;
+
+}
+
+#texto{
+    padding: 20vh;
+}
+
+#botao{
+    text-align: center;
+}
+
+#formulario{
+
+}
