@@ -1,6 +1,7 @@
 var listaProdutos = [];
 
 
+
 function cadastrar() {
     var produto = $("#produto").val();
     var marca = $("#marca").val();
@@ -18,20 +19,23 @@ function cadastrar() {
         AdicionarProduto(infProduto);
     }
 
+
 function AdicionarProduto(infProduto) {
     var elementoHtml = document.getElementById("lista-produtos");
-    var novoProduto =`
-        <div>
-            <p>Produto: ${infProduto.produto}</p>
-            <p>Marca: ${infProduto.marca}</p>
-            <p>Peso: ${infProduto.peso}</p>
-            <p>Setor: ${infProduto.setor}</p>
 
-            <button onclick='ExcluirProduto(this)' class="btn btn-danger">
-            <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>`;
+   
+    var novoProduto =`
+    <div id="uniProduto" class="bg-warning m-1 p-3 col-3">
+    <p><b>Produto:</b> ${infProduto.produto}</p>
+    <p><b>Marca:</b> ${infProduto.marca}</p>
+    <p><b>Peso (em kg):</b> ${infProduto.peso} kg</p>
+    <p><b>Setor:</b> ${infProduto.setor}</p>
+
+    <button onclick='ExcluirProduto(this)' class="btn btn-danger"> Excluir Produto <i class="fa-solid fa-xmark"></i>
+    </button>
+</div>`;
     elementoHtml.insertAdjacentHTML("beforeend",novoProduto);
+
 }
 
 function ExcluirProduto(element) {
@@ -45,3 +49,6 @@ function validFormulario(produto, marca, peso, setor) {
     } return true;
     
 }
+
+let quantProdutos = document.createElement('div');
+quantProdutos.innerHTML = `<p>Quantidade de produtos cadastrados: ${listaProdutos.lenght}</p>`
