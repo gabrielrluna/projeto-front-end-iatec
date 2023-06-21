@@ -50,5 +50,11 @@ function validFormulario(produto, marca, peso, setor) {
     
 }
 
-let quantProdutos = document.createElement('div');
-quantProdutos.innerHTML = `<p>Quantidade de produtos cadastrados: ${listaProdutos.lenght}</p>`
+function QuantidadeProdutos(listaProdutos){
+    var qProdutos = document.getElementById('qProdutos')
+    let quantProdutos = document.createElement('div');
+    quantProdutos.innerHTML = `<p>Quantidade de produtos cadastrados: ${listaProdutos.lenght}</p>`;
+    qProdutos.appendChild(quantProdutos)
+   
+}
+
