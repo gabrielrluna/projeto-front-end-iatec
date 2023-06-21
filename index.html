@@ -75,7 +75,7 @@
                             <input  id="produto" type="text" class="mt-2 mb-2 form-control" placeholder="Digite o nome do produto">
                             <input id="marca" type="text" class="mt-2 mb-2 form-control" placeholder="Digite a marca do produto">
                             <input id="peso" type="number" class="mt-2 mb-2 form-control" placeholder="Coloque o peso do produto">
-                            <select class="mt-2 mb-2 form-select" aria-label="Default select example">
+                            <select class="mt-2 mb-2 form-select" id="setor" aria-label="Default select example">
                                 <option selected>Selecione o setor que pertence o produto</option>
                                 <option value="1">Frutas, verduras e legumes</option>
                                 <option value="2">Padaria</option>
@@ -89,7 +89,7 @@
                                 <option value="3">Biscoitos</option>
                               </select>
 
-                            <button onclick="btnCadastrar()" class="btn btn-success px-5">Cadastrar</button>
+                            <button onclick="cadastrar()" class="btn btn-success px-5">Cadastrar</button>
                         </div>
                         <div class="col-6" >
                             <img src="/img/venda.jpg" class="img-fluid rounded-2" width="500" alt="">
@@ -100,14 +100,8 @@
         </section>
         <section id="lista">
             <!-- Produtos Cadastrados -->
-            <div class="container p-5 bg-dark">
+            <div class="container p-5 bg-dark" id="lista-produtos">
                 <h1 class="h1 text-white">Lista de Produtos Cadastrados</h1>
-                    <ul id="lista-produtos" class="list-group">
-                <!-- <li class="list-group-item">Item 1</li>
-                     <li class="list-group-item">Item 2</li>
-                     <li class="list-group-item">Item 3</li>
-                     <li class="list-group-item">Item 4</li> -->
-                    </ul>
 
             </div>
         </section>
@@ -121,5 +115,8 @@
 
 <!-- jQuery JS  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- JS próprio -->
+<script src="index.js"></script>
 
 </html>
