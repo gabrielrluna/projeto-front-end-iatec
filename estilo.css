@@ -39,3 +39,8 @@ header{
     padding: 20vh;
 }
 
+.modo-noturno {
+    background-color: black;
+    color: white;
+}
+

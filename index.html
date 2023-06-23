@@ -21,7 +21,7 @@
         <section id="menu-superior">
             <div><i class="fa-solid fa-phone"></i> (11) 99154-1717</div>
             <div><i class="fa-solid fa-envelope"></i> contato@webine.com.br</div>
-            <button id="noturno">Modo Noturno <i class="fa-solid fa-circle-half-stroke"></i> </button>
+            <button id="noturno">Ativar - Modo Noturno</button>
         </section>
 
         <nav class="navbar navbar-expand-lg bg-body-secondary">
@@ -47,7 +47,7 @@
                 </ul>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                  <button onclick="alert('A busca ainda não está configurada')" class="btn btn-outline-success" type="submit">Pesquisar</button>
                 </form>
               </div>
             </div>
@@ -56,12 +56,12 @@
     
     <main>
         <section id="poster" class="container-fluid mt-3 rounded-4">
-            <div id="texto">
+            <div id="texto"  >
                 <h1 class="display-1 text-center text-white">Cadastro de Produtos</h1>
                 <p class="h3 text-center text-white">O jeito mais fácil para inserir, excluir e visualizar os produtos do nosso supermercado</p>
             </div>
             
-            <div id="botao" class="text-center">
+            <div id="botao" class="text-center d-none d-lg-block">
               <a href="#cadastro"><button  id="seta" type="button" class="btn btn-lg text-white" style="--bs-btn-font-size: 4rem;"><i class="fa-sharp fa-solid fa-circle-down"></i></button></a>
             </div>
         </section>
@@ -71,7 +71,7 @@
                 <div class="p-5 bg-body-tertiary mt-5">
                     <h1 class="text-success mb-4">Cadastre seu produto</h1>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-12 col-lg-6 ">
                             <input  id="produto" type="text" class="mt-2 mb-2 form-control" placeholder="Digite o nome do produto">
                             <input id="marca" type="text" class="mt-2 mb-2 form-control" placeholder="Digite a marca do produto">
                             <input id="peso" type="number" class="mt-2 mb-2 form-control" placeholder="Coloque o peso do produto">
@@ -80,18 +80,18 @@
                                 <option value="1">Frutas, verduras e legumes</option>
                                 <option value="2">Padaria</option>
                                 <option value="3">Frios</option>
-                                <option value="3">Bebidas</option>
-                                <option value="3">Higiene</option>
-                                <option value="3">Laticíneos</option>
-                                <option value="3">Carnes</option>
-                                <option value="3">Doces</option>
-                                <option value="3">Grãos</option>
-                                <option value="3">Biscoitos</option>
+                                <option value="4">Bebidas</option>
+                                <option value="5">Higiene</option>
+                                <option value="6">Laticíneos</option>
+                                <option value="7">Carnes</option>
+                                <option value="8">Doces</option>
+                                <option value="9">Grãos</option>
+                                <option value="10">Biscoitos</option>
                               </select>
 
                             <button onclick="cadastrar()" class="btn btn-success px-5">Cadastrar</button>
                         </div>
-                        <div class="col-6" >
+                        <div class="col-6 d-none d-lg-block" >
                             <img src="/img/venda.jpg" class="img-fluid rounded-2" width="500" alt="">
                         </div>
                     </div>
@@ -102,8 +102,10 @@
             <!-- Produtos Cadastrados -->
             <div class="container p-5 bg-dark" >
                 <h1 class="h1 col-12 text-white text-center mb-5">Lista de Produtos Cadastrados</h1>
-                <div onload=QuantidadeProdutos(listaProdutos) id="qProdutos"></div>
-              <div id="lista-produtos" class="row row-cols-3 justify-content-center">
+                <div onload="quantidadeProdutos(listaProdutos)" id="qProdutos">
+
+                </div>
+              <div id="lista-produtos" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center">
 
 
             </div>
@@ -113,7 +115,7 @@
         
         <div class="container">
           <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+            <p class="col-md-4 mb-0 text-muted">&copy; 2023 Webine Tech LTDA</p>
         
             <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
               <img src="/img/circle-logo-turbine-png.webp" width="30" height="30" alt="">
